@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+  <title>Music</title>
+  <link rel="stylesheet" href="styles/global.css" />
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+</head>
+
+<body>
+  <header class="container_header">
+    <div class="titulo">
+      <h4>Music</h4>
+    </div>
+    <div class="container_pesquisa">
+      <input type="text" name="text" class="input" placeholder="Pesquisa" />
+      <button class="search__btn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22">
+          <path
+            d="M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168ZM16.0247 15.8748C17.2475 14.6146 18 12.8956 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18C12.8956 18 14.6146 17.2475 15.8748 16.0247L16.0247 15.8748Z"
+            fill="#efeff1"></path>
+        </svg>
+      </button>
+    </div>
+
+    <nav class="nav_bar">
+      <ul class="nav_list">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#bibliotecaM">musicas</a></li>
+        <li><a href="#bibliotecaV">Biblioteca de Videos</a></li>
+        <div class="line"></div>
+        <li><a href="#baixar">Baixar musicas e videos</a></li>
+        <li><a href="#playlist">Playlists</a></li>
+      </ul>
+    </nav>
+
+    <div class="container_config">
+      <ul class="nav_list">
+        <li><a href="#config">Configurações</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio">
+      <div class="titulo_section">
+        <h1>Inicio</h1>
+      </div>
+      <div class="container_conteudo_main">
+        <div class="container_img_inicio">
+          <img src="./assets/images/images_section/image_inicio.png" alt="" />
+        </div>
+        <div class="container_texto_arquivos">
+          <div class="texto_inicio">
+            <h2>Descubra o Reprodutor Multimídia</h2>
+            <p>Explore este novo aplicativo para desfrutar de uma experiência completa de áudio e vídeo. Organize e
+              reproduza suas músicas e vídeos favoritos em um só lugar e desfrute de uma biblioteca de entretenimento
+              personalizada.</p>
+          </div>
+          <div class="input-div">
+            <input class="input_inicio" name="file" type="file" />
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" stroke-linejoin="round"
+              stroke-linecap="round" viewBox="0 0 24 24" stroke-width="2" fill="none" stroke="currentColor"
+              class="icon">
+              <polyline points="16 16 12 12 8 16"></polyline>
+              <line y2="21" x2="12" y1="12" x1="12"></line>
+              <path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"></path>
+              <polyline points="16 16 12 12 8 16"></polyline>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="bibliotecaM" class="active">
+      <div class="titulo_section">
+        <h1>Musicas</h1>
+      </div>
+      <div class="container_conteudo_main" id="conteudo_musica">
+        <div class="container_img_inicio">
+          <img src="./assets/images/images_section/image_bibliotecaM.png" alt="" />
+        </div>
+        <div class="container_texto_arquivos">
+          <div class="texto_inicio">
+            <h2>Explore sua biblioteca de músicas</h2>
+            <p>Organize e acesse todas as suas músicas favoritas em um só lugar. Adicione novas faixas e aproveite uma
+              experiência musical personalizada.</p>
+
+          </div>
+          <div class="container_arquivos_musica">
+            <input class="input_bibliotecaM" name="file" type="file">
+            <button class="open-file">
+              <span class="file-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 71 67">
+                  <path stroke-width="5" stroke="black"
+                    d="M41.7322 11.7678L42.4645 12.5H43.5H68.5V64.5H2.5V2.5H32.4645L41.7322 11.7678Z"></path>
+                </svg>
+                <span class="file-front"></span>
+              </span>
+              Abrir aquivo
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container_lista_musicas" id="conteudo_central_musica">
+        <div class="carousel_musica"></div>
+        <div class="lista_musicas"></div>
+      </div>
+    </section>
+
+    <section id="bibliotecaV" class="active">
+      <div class="titulo_section">
+        <h1>Videos</h1>
+      </div>
+      <div class="container_conteudo_main" id="conteudo_video">
+        <div class="container_img_inicio">
+          <img src="./assets/images/images_section/image_bibliotecaV.png" alt="" />
+        </div>
+        <div class="container_texto_arquivos">
+          <div class="texto_inicio">
+            <h2>Explore sua biblioteca de vídeos</h2>
+            <p>Organize e acesse facilmente todos os seus vídeos favoritos em um só lugar. Adicione novos vídeos e
+              desfrute de uma experiência personalizada.</p>
+
+          </div>
+          <div class="container_arquivos_musica">
+            <input class="input_bibliotecaM" name="file" type="file">
+            <button class="open-file">
+              <span class="file-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 71 67">
+                  <path stroke-width="5" stroke="black"
+                    d="M41.7322 11.7678L42.4645 12.5H43.5H68.5V64.5H2.5V2.5H32.4645L41.7322 11.7678Z"></path>
+                </svg>
+                <span class="file-front"></span>
+              </span>
+              Abrir aquivo
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="container_video" id="conteudo_central_video">
+        <div class="carousel_video">
+          <div class="itens_video"></div>
+          <div class="itens_video"></div>
+          <div class="itens_video"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="baixar" class="active">
+      <div class="titulo_section">
+        <h1>Baixar Conteúdo</h1>
+      </div>
+      <div class="container_conteudo_main">
+        <div class="container_img_inicio">
+          <img src="./assets/images/images_section/image_baixar.png" alt="" />
+        </div>
+        <div class="container_texto_arquivos">
+          <div class="texto_inicio">
+            <h2>Baixe seus vídeos e músicas favoritos</h2>
+            <p>Adicione novos conteúdos à sua biblioteca e aproveite suas mídias preferidas a qualquer momento, mesmo
+              offline.</p>
+
+          </div>
+          <div class="container_baixar">
+            <input class="baixar_conteudo" name="text" type="text">
+            <button type="submit" id="btn_baixar">
+              ↓</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="playlist" class="active">
+      <div class="titulo_section">
+        <h1>Playlists</h1>
+      </div>
+      <div class="container_conteudo_main">
+        <div class="container_img_inicio">
+          <img src="./assets/images/images_section/image_playlist.png" alt="" />
+        </div>
+        <div class="container_texto_arquivos">
+          <div class="texto_inicio">
+            <h2>Crie e organize suas playlists</h2>
+            <p>Organize suas músicas e vídeos favoritos em playlists personalizadas para facilitar o acesso e tornar sua
+              experiência de entretenimento ainda melhor.</p>
+
+
+          </div>
+          <div class="container_arquivos_musica">
+            <input class="input_bibliotecaM" name="file" type="file">
+            <button class="open-file">
+              <span class="file-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 71 67">
+                  <path stroke-width="5" stroke="black"
+                    d="M41.7322 11.7678L42.4645 12.5H43.5H68.5V64.5H2.5V2.5H32.4645L41.7322 11.7678Z"></path>
+                </svg>
+                <span class="file-front"></span>
+              </span>
+              Abrir aquivo
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="config" class="active">
+      <div class="titulo_section">
+        <h1>Configurações</h1>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="midiaReproducao">
+      <div class="range_video">
+        <form action="#" class="tempo">
+          <span id="tempo_inicio" class="temp_inicio">00:00</span>
+          <input class="progresso" type="range" name="musica" value="0" />
+          <span id="quantidade_final" class="temp_final">00:00</span>
+        </form>
+        <form action="#" class="player_container">
+          <button class="voltar_music"><img src="./assets/icons/voltar.png" alt=""></button>
+          <!-- <button class="retroceder_music"><img src="" alt=""></button> -->
+          <div class="player_pause">
+            <button class="pause"><img src="./assets/icons/pause.png" alt=""></button>
+            <button class="player"><img src="./assets/icons/play.png" alt=""></button>
+          </div>
+          <!-- <button class="avancar_music"><img src="" alt=""></button> -->
+          <button class="proxima_music"><img src="./assets/icons/proximo.png" alt=""></button>
+        </form>
+      </div>
+    </div>
+  </footer>
+</body>
+<script src="scripts/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</html>

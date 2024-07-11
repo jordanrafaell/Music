@@ -1,0 +1,81 @@
+/* Importação de todos os estilos */
+@import './components/config.css';
+@import './components/menu.css';
+@import './components/multiMidia.css';
+@import './components/main.css';
+
+/* Importação de fonts */
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;800;900&display=swap);
+
+/* Importação de cores e fonts */
+/* modo dark */
+:root {
+  --cor-principal: rgb(39, 38, 38);
+  --cor-texto: white;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "header main"
+    "footer footer";
+  width: 100%;
+  height: 100vh;
+  background-color: var(--cor-principal);
+  color: var(--cor-texto);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+}
+
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
+
+a, button, li {
+  text-decoration: none !important;
+  outline: none !important;
+  cursor: pointer !important;
+}
+
+.titulo_section h1 {
+  display: flex;
+  justify-content: start;
+  width: 100%;
+  height: 50px;
+  font-weight: 600;
+  font-size: 30px;
+  padding: 10px 0px 0px 20px;
+}
+
+.active {
+  display: none;
+}
+
+section#Inicio.active {
+  display: block;
+}
+
+main, section {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+  height: 100%;
+  gap: 10px;
+}
